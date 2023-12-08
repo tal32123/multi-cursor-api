@@ -19,7 +19,6 @@ export class CommentController {
     
     @Post(':parentId/replies')
     createReply(@Param('parentId') parentId: number, @Body() commentData: Comment): Promise<Comment> {
-      console.log()
         return this.commentService.createReply(parentId, commentData);
     }
 }
